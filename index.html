@@ -46,7 +46,7 @@
     </header>
     <main>
       <!-- Work: Icons -->
-      <section id="work" class="icons bg-light">
+      <!-- <section id="work" class="icons bg-light">
         <h2>WORK EXPERIENCE</h2>
         <div class="flex-items">
           <div>
@@ -65,15 +65,15 @@
               <p>10/2020 - 03/2021</p>
             </div>
           </div>
-          <!-- <div>
+          <div>
             <i class="fas fa-university fa-2x"></i>
             <div>
               <h3>University</h3>
               <p>Polytechnic University of the Philippines</p>
             </div>
-          </div> -->
+          </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- About: About-Me -->
       <section id="about" class="about-me flex-columns">
@@ -133,14 +133,9 @@
       </section>
 
       <!-- Skills -->
-
       <section id="skills" class="skills flex-grid section-padding bg-dark">
         <header class="section-header">
           <h2>SKILLS</h2>
-          <!-- <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-            ratione!
-          </p> -->
         </header>
         <div class="row">
           <div class="column">
@@ -194,8 +189,65 @@
         </div>
       </section>
 
-      <!-- Contact -->
+      <!-- Work Exp -->
+      <header id="main-header">
+        <div class="container">
+          <h1>Work Experience</h1>
+          <h3>John Paul Dugaojo</h3>
+        </div>
+      </header>
 
+      <section id="timeline">
+        <ul>
+          <li>
+            <div>
+              <h3>
+                <i class="fas fa-chevron-right"></i> 04/2018 - 06/2018: IT
+                Maintenance Intern
+              </h3>
+              <p>Manila City Hall</p>
+              <p>
+                Handled network and hardware troubleshooting in an enterprise
+                environment, Tracked and documented IT equipment issues to
+                facilitate timely resolution
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <h3>
+                <i class="fas fa-chevron-right"></i> 11/2019 - 03/2020: Web
+                Developer Intern
+              </h3>
+              <p>Tropical Focus Philippines, Inc.</p>
+              <p>
+                Worked closely with web developers and assisted them in group
+                web development projects. Resolved minor bug fixes and created
+                documentation for existing development projects
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <h3>
+                <i class="fas fa-chevron-right"></i> 10/2020 - 03/2021: Quality
+                Assurance Staff
+              </h3>
+              <p>EMI Yazaki</p>
+              <p>
+                Ensures the final product meets the company quality standards; A
+                detail oriented professional responsible for developing and
+                carrying out of inspection activities, detecting and resolving
+                problems and achieving satisfactory results
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
       <section id="contact" class="icons bg-light">
         <div class="flex-items">
           <div>
@@ -237,6 +289,7 @@
       </div>
       <p>Copyright &copy; 2021 - JPGD</p>
     </footer>
+
     <!-- Jquery -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -246,40 +299,6 @@
     <!-- LightBox -->
     <script src="js/lightbox.min.js"></script>
 
-    <script>
-      const navbar = document.getElementById('navbar');
-      let scrolled = false;
-
-      window.onscroll = function () {
-        if (window.pageYOffset > 100) {
-          navbar.classList.remove('top');
-          if (!scrolled) {
-            navbar.style.transform = 'translateY(-70px)';
-          }
-          setTimeout(function () {
-            navbar.style.transform = 'translateY(0)';
-            scrolled = true;
-          }, 200);
-        } else {
-          navbar.classList.add('top');
-          scrolled = false;
-        }
-      };
-
-      $('#navbar a, .btn').on('click', function (e) {
-        if (this.hash !== '') {
-          e.preventDefault();
-
-          const hash = this.hash;
-
-          $('html, body').animate(
-            {
-              scrollTop: $(hash).offset().top - 100,
-            },
-            800
-          );
-        }
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
